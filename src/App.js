@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar'
 import Home from './components/home/Home'
 import EditInvoice from './components/invoices/EditInvoice'
 import CreateInvoice from './components/invoices/CreateInvoice'
+import Invoicepdf from './components/invoices/Invoicepdf'
 class App extends Component {
     render() {
         return (
@@ -12,8 +13,9 @@ class App extends Component {
                     <Navbar />
                     <Switch>
                         <Route exact path='/' component={Home} />
-                        <Route path='/create' component={CreateInvoice} />
-                        <Route path='/invoice/:id' component={EditInvoice} />
+                        <Route exact path='/create' component={CreateInvoice} />
+                        <Route exact path='/invoice/:id' component={EditInvoice} />
+                        <Route exact path='/invoicepdf/:id' component={Invoicepdf} />
                     </Switch>
                 </div>
             </BrowserRouter>

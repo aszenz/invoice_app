@@ -41,7 +41,7 @@ class Invoice extends Component {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button type="submit" size="small" component={Link} to={'/invoice/' + inv_details.id} color="primary">
+                        <Button size="small" component={Link} to={'/invoice/' + inv_details.id} color="primary">
                             Edit
                         </Button>
                         <form onSubmit={this.handleSubmit}>
@@ -49,6 +49,9 @@ class Invoice extends Component {
                                 Delete
                             </Button>
                         </form>
+                        <Button size="small" component={Link} to={'/invoicepdf/' + inv_details.id} color="inherit" >
+                            View and Email Invoice
+                        </Button>
                     </CardActions>
                 </Card>
             </div>
